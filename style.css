@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+  text-align: center;
+  width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  margin-bottom: 20px;
+  background-color: antiquewhite;
+}
+
+.alertSuccess {
+  background-color: green;
+  color: white;
+  width: 250px;
+  height: 25px;
+  margin: 5px 0px 4px 55px;
+  border-radius: 3px;
+  padding: 4px;
+}
+.alertWarning {
+  background-color: #ffff66;
+  width: 250px;
+  height: 25px;
+  margin: 5px 0px 4px 55px;
+  border-radius: 3px;
+  padding: 4px;
+}
+.clearButton {
+  color: white;
+  background: tomato;
+  width: 100px;
+  height: 30px;
+  border-radius: 3px;
+  border: 0.5px solid transparent;
+  cursor: pointer;
+  position: relative;
+  left: 300px;
+  top: -3px;
+}
+
+.clearButton:hover {
+  scale: 110%;
+}
+.contentHold {
+  display: flex;
+  flex-direction: column;
+}
+.contents {
+  padding: 5px 5px;
+  height: 45px;
+  background-color: antiquewhite;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(106, 111, 67);
+}
+.contents:last-child {
+  border-bottom: none;
+}
+
+.titleText {
+  color: rgb(206, 124, 52);
+}
+
+.inputText {
+  width: 250px;
+  height: 35px;
+  border: none;
+  margin-bottom: 5px;
+  border-radius: 3px;
+}
+.addButton {
+  cursor: pointer;
+  background-color: rgb(48, 146, 48);
+  border: none;
+  height: 35px;
+  width: 35px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  border-radius: 3px;
+}
+
+.addButton:hover #plus {
+  color: white;
+}
+
+.contentLeft {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.todo {
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.editButton {
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  background-color: rgb(214, 211, 211);
+}
+.editButton:hover {
+  color: white;
+  background-color: rgb(95, 179, 239);
+}
+.deleteButton {
+  font-size: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  background-color: rgb(214, 211, 211);
+}
+.deleteButton:hover {
+  color: white;
+  background-color: rgb(225, 41, 41);
+}
+
+.checkbox:checked ~ .todo {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.editInput {
+  position: absolute;
+  padding: 6px 8px;
+  font-size: 0.9rem;
+  border-radius: 4px 0 0 4px;
+  border: none;
+  outline: none;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.contentRight {
+  position: relative;
+}
+
+.saveButton {
+  position: absolute;
+  right: 0;
+  background-color: rgb(61, 164, 224);
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  color: white;
+  border-radius: 4px 4px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.saveButton:hover {
+  background-color: rgb(65, 147, 194);
+}
+
+.contents.-edited .contentLeft *,
+.contents.-edited .contentRight * {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.contents.-edited .contentLeft .editInput,
+.contents.-edited .contentRight .saveButton {
+  opacity: 1;
+  pointer-events: all;
+}
